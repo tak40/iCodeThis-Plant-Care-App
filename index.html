@@ -1,0 +1,90 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Plant Care App</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="appScreen" class="screen welcome-screen">
+            <div id="welcomeContent" class="content-area welcome-container">
+                <div class="welcome-text">
+                    <h1>Plant.</h1>
+                    <p>Caring for your plants made easy.</p>
+                </div>
+                <div class="welcome-btns">
+                    <button id="signUpBtn" class="btn">Sign Up</button>
+                    <button id="logInBtn" class="btn">Log In</button>
+                </div>
+            </div>
+
+            <div
+                id="plantsContent"
+                class="content-area hidden your-plants-container"
+            >
+                <header>
+                    <i class="fas fa-bars"></i>
+                    <h2>Your Plants</h2>
+                </header>
+                <div class="carousel-container">
+                    <div class="plant-carousel">
+                        <img
+                            class="plant-image"
+                            src="https://images.pexels.com/photos/1048035/pexels-photo-1048035.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Jade Plant Image 1"
+                        />
+                        <img
+                            class="plant-image"
+                            src="https://images.pexels.com/photos/1407305/pexels-photo-1407305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Jade Plant Image 2"
+                        />
+                        <img
+                            class="plant-image"
+                            src="https://images.pexels.com/photos/35196/water-plant-green-fine-layers.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Jade Plant Image 3"
+                        />
+                        <img
+                            class="plant-image"
+                            src="https://images.pexels.com/photos/1046348/pexels-photo-1046348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Jade Plant Image 4"
+                        />
+                        <img
+                            class="plant-image"
+                            src="https://images.pexels.com/photos/1445417/pexels-photo-1445417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Jade Plant Image 5"
+                        />
+                    </div>
+                </div>
+                <div class="plant-details">
+                    <h3>Jade</h3>
+                    <div class="plant-data">
+                        <div class="last-watered">
+                            <div class="plant-data-top">
+                                <i class="fa-regular fa-clock"></i>
+                                <p>Last watered</p>
+                            </div>
+                            <p>2 days ago</p>
+                        </div>
+                        <div class="next-watering">
+                            <div class="plant-data-bottom">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <p>Next watering</p>
+                            </div>
+                            <p>In 3 days</p>
+                        </div>
+                    </div>
+                    <button class="activity-btn">Activity</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

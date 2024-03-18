@@ -1,0 +1,208 @@
+/** @format */
+
+:root {
+    --main-bg-color: #e0f2f1;
+    --btn-bg-color: #26a69a;
+    --text-color: #004d40;
+    --plant-card-bg-color: #ffffff;
+    --carousel-hover-scale: 1.1;
+    --mobile-width: 375px;
+    --mobile-height: 667px;
+    --btn-gradient-start: #64bfa4;
+    --btn-gradient-end: #26a69a;
+    --btn-text-color: var(--text-color);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: dotted 1px red; */
+}
+
+body,
+html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--mobile-width);
+    height: var(--mobile-height);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.welcome-screen {
+    background: url('https://images.pexels.com/photos/4467127/pexels-photo-4467127.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
+        no-repeat left / contain;
+    background-size: cover;
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 3em 0;
+    height: 100vh;
+}
+
+.welcome-text {
+    text-align: left;
+}
+
+.welcome-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.2em;
+    color: var(--text-color);
+}
+
+.welcome-btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    padding: 15px 30px;
+    margin: 10px 0;
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-image: linear-gradient(
+        to right,
+        var(--btn-gradient-start),
+        var(--btn-gradient-end)
+    );
+    color: white;
+    transform: translateY(-2px);
+}
+
+.your-plants-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 2em 0;
+}
+
+.carousel-container {
+    overflow-x: auto;
+    width: var(--mobile-width);
+}
+
+.plant-carousel {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    gap: 10px;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.plant-image {
+    width: 250px;
+    height: 250px;
+    margin-right: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.plant-image:hover {
+    transform: scale(var(--carousel-hover-scale));
+}
+
+.plant-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    text-align: center;
+    padding: 1em 0 1.5em 0;
+}
+
+.plant-details h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.plant-data {
+    display: flex;
+    gap: 1.75em;
+}
+
+.last-watered,
+.next-watering {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.plant-data-top,
+.plant-data-bottom {
+    display: flex;
+    gap: 0.5em;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.activity-btn {
+    background-color: var(--btn-bg-color);
+    border: none;
+    border-radius: 50px;
+    padding: 0.75em 1.5em;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4em;
+    padding-left: 2em;
+    align-items: center;
+    width: 100%;
+    background: var(--plant-card-bg-color);
+}
+
+header i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.hidden {
+    transform: translateX(100%);
+    display: none;
+}
